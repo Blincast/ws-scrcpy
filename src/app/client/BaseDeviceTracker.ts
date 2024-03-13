@@ -59,7 +59,7 @@ export abstract class BaseDeviceTracker<DD extends BaseDeviceDescriptor, TE exte
             hostname = location.hostname;
             port = location.port;
         }
-        const hash = `#!${new URLSearchParams(q).toString()}`;
+        const hash = `private/scrcpy/#!${new URLSearchParams(q).toString()}`;
         const a = document.createElement('a');
         a.setAttribute('href', `${protocol}//${hostname}:${port}/${hash}`);
         a.setAttribute('rel', 'noopener noreferrer');
