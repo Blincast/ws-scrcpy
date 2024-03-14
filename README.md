@@ -26,6 +26,24 @@ npm run build
 cd dist && npm start
 ```
 
+# systemd service
+```shell
+[Unitt]
+Description=ws-scrcpy background service
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/ws-scrcpy/start.sh
+WorkingDirectory=/home/ubuntu/ws-scrcpy
+Restart=always
+RuntimeMaxSec=1d
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ## Requirements
 
 Browser must support the following technologies:
