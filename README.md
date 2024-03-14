@@ -28,7 +28,7 @@ cd dist && npm start
 
 # systemd service
 ```shell
-[Unitt]
+[Unit]
 Description=ws-scrcpy background service
 After=network.target
 
