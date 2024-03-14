@@ -2,6 +2,30 @@
 
 Web client for [Genymobile/scrcpy][scrcpy] and more.
 
+## Quick Blinstart
+
+```shell
+
+# first time installing
+sudo apt install npm
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+nvm install 16.20.2
+# if nvm fails, run source ~/.nvm/nvm.sh and try again
+nvm use 16.20.2
+nvm alias default 16.20.2
+
+
+npm install -g node-gyp
+npm install
+npm run build
+
+
+# for running after building
+cd dist && npm start
+```
+
 ## Requirements
 
 Browser must support the following technologies:
